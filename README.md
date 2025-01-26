@@ -17,3 +17,10 @@ Run CaiSky.exe, and login, then you're free to post :)
 # Known Problem(s)
 
 Emojis just do not work, sometimes it posts some random Unicode symbols and sometimes it outright crashes the program.
+
+# Credits
+
+Thank you to:
+
+Sego (https://bsky.app/profile/segalmandev.bsky.social) for the CaiSky name suggestion
+
