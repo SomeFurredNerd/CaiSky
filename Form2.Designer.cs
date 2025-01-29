@@ -47,17 +47,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(189, 9);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(183, 9);
             label1.Name = "label1";
-            label1.Size = new Size(73, 29);
+            label1.Size = new Size(73, 32);
             label1.TabIndex = 0;
             label1.Text = "Login";
-            label1.Click += label1_Click;
+            //label1.Click += label1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(133, 85);
+            textBox1.Location = new Point(132, 85);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(177, 23);
             textBox1.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(133, 138);
+            textBox2.Location = new Point(132, 138);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(177, 23);
@@ -75,28 +75,28 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F);
-            label2.Location = new Point(177, 59);
+            label2.Font = new Font("Segoe UI", 14.25F);
+            label2.Location = new Point(176, 59);
             label2.Name = "label2";
-            label2.Size = new Size(97, 24);
+            label2.Size = new Size(97, 25);
             label2.TabIndex = 3;
             label2.Text = "Username";
-            label2.Click += label2_Click;
+            //label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F);
-            label3.Location = new Point(177, 112);
+            label3.Font = new Font("Segoe UI", 14.25F);
+            label3.Location = new Point(176, 111);
             label3.Name = "label3";
-            label3.Size = new Size(92, 24);
+            label3.Size = new Size(91, 25);
             label3.TabIndex = 4;
             label3.Text = "Password";
-            label3.Click += label3_Click;
+            //label3.Click += label3_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(181, 167);
+            button1.Location = new Point(183, 167);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 5;
@@ -118,18 +118,18 @@
             process2.StartInfo.UseCredentialsForNetworkingOnly = false;
             process2.StartInfo.UserName = "";
             process2.SynchronizingObject = this;
-            process2.Exited += process2_Exited;
+            //process2.Exited += process2_Exited;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(0, 195);
             label4.Name = "label4";
-            label4.Size = new Size(439, 15);
+            label4.Size = new Size(440, 15);
             label4.TabIndex = 6;
             label4.Text = "The username and password seem to be incorrect. Check the details and try again.";
             label4.Visible = false;
-            label4.Click += label4_Click;
+            //label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -180,7 +180,7 @@
             label8.TabIndex = 11;
             label8.Text = "An error occurred while signing in. Check the         for more details.";
             label8.Visible = false;
-            label8.Click += label8_Click;
+            //label8.Click += label8_Click;
             // 
             // logLabel
             // 

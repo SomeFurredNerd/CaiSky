@@ -67,13 +67,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Coolvetica", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(25, 9);
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(19, 9);
             label1.Name = "label1";
-            label1.Size = new Size(722, 38);
+            label1.Size = new Size(783, 45);
             label1.TabIndex = 1;
             label1.Text = "Cairo's incredibly well made BlueSky posting interface";
-            label1.Click += label1_Click;
+            //label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -88,13 +88,13 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Coolvetica", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(257, 108);
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(255, 108);
             label2.Name = "label2";
-            label2.Size = new Size(284, 29);
+            label2.Size = new Size(291, 32);
             label2.TabIndex = 3;
             label2.Text = "What do you want to say?";
-            label2.Click += label2_Click;
+            //label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -178,7 +178,7 @@
             label4.Size = new Size(153, 15);
             label4.TabIndex = 9;
             label4.Text = "If you see this, no you don't";
-            label4.Click += label4_Click;
+            //label4.Click += label4_Click;
             // 
             // pictureBox3
             // 
@@ -190,7 +190,7 @@
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
             pictureBox3.Visible = false;
-            pictureBox3.Click += pictureBox3_Click;
+            //pictureBox3.Click += pictureBox3_Click;
             // 
             // imageList1
             // 
@@ -209,7 +209,7 @@
             statusLabel.Text = "Complete!";
             statusLabel.TextAlign = ContentAlignment.MiddleCenter;
             statusLabel.Visible = false;
-            statusLabel.Click += label3_Click;
+            //statusLabel.Click += label3_Click;
             // 
             // label5
             // 
@@ -220,7 +220,7 @@
             label5.TabIndex = 5;
             label5.Text = "Attempting to post...";
             label5.Visible = false;
-            label5.Click += label5_Click;
+            //label5.Click += label5_Click;
             // 
             // label6
             // 

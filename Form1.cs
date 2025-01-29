@@ -10,6 +10,7 @@ namespace CaiSky
         public Form1()
         {
             InitializeComponent();
+            
             // File.WriteAllText("currentworkingdirectory.txt", "a"); debug line to make sure i'm working in the right directory lol
             process2.Start();
             process2.WaitForExit();
@@ -28,11 +29,6 @@ namespace CaiSky
             label4.Text = username;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             statusLabel.Visible = false;
@@ -43,11 +39,6 @@ namespace CaiSky
             {
                 pictureBox3.Visible = true;
             }
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -71,6 +62,7 @@ namespace CaiSky
                 if (!string.IsNullOrWhiteSpace(postingerror))
                 {
                     errorLogPath = @$"logs\postingerror{time.ToString("ddMMyyyy_hhmmsss")}.txt";
+                    Directory.CreateDirectory("logs");
                     File.WriteAllText($"{errorLogPath}", $"{postingerror}");
                     label5.Visible = false;
                     label6.Visible = true;
@@ -93,12 +85,6 @@ namespace CaiSky
 
 
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -114,21 +100,6 @@ namespace CaiSky
         {
             Form3 f3 = new Form3();
             f3.ShowDialog();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

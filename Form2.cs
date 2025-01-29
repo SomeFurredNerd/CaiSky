@@ -95,29 +95,6 @@ namespace CaiSky
             label4.Visible = false;
             label5.Visible = false;
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void process2_Exited(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.LinkVisited = true;
@@ -127,11 +104,6 @@ namespace CaiSky
                 UseShellExecute = true
             };
             Process.Start(appPasswordLink);
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void logLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
