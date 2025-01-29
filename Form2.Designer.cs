@@ -40,15 +40,17 @@
             linkLabel1 = new LinkLabel();
             label6 = new Label();
             label7 = new Label();
+            label8 = new Label();
+            logLabel = new LinkLabel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Coolvetica", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(189, 9);
             label1.Name = "label1";
-            label1.Size = new Size(67, 29);
+            label1.Size = new Size(73, 29);
             label1.TabIndex = 0;
             label1.Text = "Login";
             label1.Click += label1_Click;
@@ -73,10 +75,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Coolvetica", 14.25F);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F);
             label2.Location = new Point(177, 59);
             label2.Name = "label2";
-            label2.Size = new Size(89, 23);
+            label2.Size = new Size(97, 24);
             label2.TabIndex = 3;
             label2.Text = "Username";
             label2.Click += label2_Click;
@@ -84,10 +86,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Coolvetica", 14.25F);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F);
             label3.Location = new Point(177, 112);
             label3.Name = "label3";
-            label3.Size = new Size(84, 23);
+            label3.Size = new Size(92, 24);
             label3.TabIndex = 4;
             label3.Text = "Password";
             label3.Click += label3_Click;
@@ -123,7 +125,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(0, 195);
             label4.Name = "label4";
-            label4.Size = new Size(440, 15);
+            label4.Size = new Size(439, 15);
             label4.TabIndex = 6;
             label4.Text = "The username and password seem to be incorrect. Check the details and try again.";
             label4.Visible = false;
@@ -169,11 +171,35 @@
             label7.Text = "Signing in...";
             label7.Visible = false;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(44, 195);
+            label8.Name = "label8";
+            label8.Size = new Size(358, 15);
+            label8.TabIndex = 11;
+            label8.Text = "An error occurred while signing in. Check the         for more details.";
+            label8.Visible = false;
+            label8.Click += label8_Click;
+            // 
+            // logLabel
+            // 
+            logLabel.AutoSize = true;
+            logLabel.Location = new Point(286, 195);
+            logLabel.Name = "logLabel";
+            logLabel.Size = new Size(24, 15);
+            logLabel.TabIndex = 12;
+            logLabel.TabStop = true;
+            logLabel.Text = "log";
+            logLabel.LinkClicked += logLabel_LinkClicked;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 219);
+            Controls.Add(logLabel);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(linkLabel1);
@@ -207,5 +233,7 @@
         private Label label6;
         private LinkLabel linkLabel1;
         private Label label7;
+        private Label label8;
+        public LinkLabel logLabel;
     }
 }
