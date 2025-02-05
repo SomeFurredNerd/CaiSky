@@ -8,8 +8,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<NoWarn>$(NoWarn);WFO1000</NoWarn>
 	<ApplicationManifest>app.manifest</ApplicationManifest>
-	<Configurations>Debug;Release;32-bit</Configurations>
-	<Platforms>AnyCPU;ARM32</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
