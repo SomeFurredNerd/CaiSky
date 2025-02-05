@@ -7,14 +7,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaiSky", "CaiSky.csproj", "
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		32-bit|Any CPU = 32-bit|Any CPU
+		32-bit|ARM32 = 32-bit|ARM32
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM32 = Debug|ARM32
 		Release|Any CPU = Release|Any CPU
+		Release|ARM32 = Release|ARM32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7828509-1773-4DEE-9886-5B4454F9766E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7828509-1773-4DEE-9886-5B4454F9766E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.32-bit|Any CPU.ActiveCfg = 32-bit|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.32-bit|Any CPU.Build.0 = 32-bit|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.32-bit|ARM32.ActiveCfg = 32-bit|ARM32
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.32-bit|ARM32.Build.0 = 32-bit|ARM32
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.Debug|ARM32.Build.0 = Debug|ARM32
 		{D7828509-1773-4DEE-9886-5B4454F9766E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7828509-1773-4DEE-9886-5B4454F9766E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.Release|ARM32.ActiveCfg = Release|Any CPU
+		{D7828509-1773-4DEE-9886-5B4454F9766E}.Release|ARM32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
