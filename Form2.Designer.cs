@@ -42,6 +42,7 @@
             label7 = new Label();
             label8 = new Label();
             logLabel = new LinkLabel();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -53,7 +54,6 @@
             label1.Size = new Size(73, 32);
             label1.TabIndex = 0;
             label1.Text = "Login";
-            //label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -81,7 +81,6 @@
             label2.Size = new Size(97, 25);
             label2.TabIndex = 3;
             label2.Text = "Username";
-            //label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -92,11 +91,10 @@
             label3.Size = new Size(91, 25);
             label3.TabIndex = 4;
             label3.Text = "Password";
-            //label3.Click += label3_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(183, 167);
+            button1.Location = new Point(186, 186);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 5;
@@ -118,23 +116,21 @@
             process2.StartInfo.UseCredentialsForNetworkingOnly = false;
             process2.StartInfo.UserName = "";
             process2.SynchronizingObject = this;
-            //process2.Exited += process2_Exited;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(0, 195);
+            label4.Location = new Point(3, 214);
             label4.Name = "label4";
             label4.Size = new Size(440, 15);
             label4.TabIndex = 6;
             label4.Text = "The username and password seem to be incorrect. Check the details and try again.";
             label4.Visible = false;
-            //label4.Click += label4_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(101, 195);
+            label5.Location = new Point(104, 214);
             label5.Name = "label5";
             label5.Size = new Size(232, 15);
             label5.TabIndex = 7;
@@ -164,7 +160,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(184, 195);
+            label7.Location = new Point(187, 214);
             label7.Name = "label7";
             label7.Size = new Size(69, 15);
             label7.TabIndex = 10;
@@ -174,18 +170,17 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(44, 195);
+            label8.Location = new Point(47, 214);
             label8.Name = "label8";
             label8.Size = new Size(358, 15);
             label8.TabIndex = 11;
             label8.Text = "An error occurred while signing in. Check the         for more details.";
             label8.Visible = false;
-            //label8.Click += label8_Click;
             // 
             // logLabel
             // 
             logLabel.AutoSize = true;
-            logLabel.Location = new Point(286, 195);
+            logLabel.Location = new Point(289, 214);
             logLabel.Name = "logLabel";
             logLabel.Size = new Size(24, 15);
             logLabel.TabIndex = 12;
@@ -193,11 +188,22 @@
             logLabel.Text = "log";
             logLabel.LinkClicked += logLabel_LinkClicked;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(174, 167);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(99, 19);
+            checkBox1.TabIndex = 13;
+            checkBox1.Text = "Stay signed in";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(440, 219);
+            ClientSize = new Size(440, 241);
+            Controls.Add(checkBox1);
             Controls.Add(logLabel);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -235,5 +241,6 @@
         private Label label7;
         private Label label8;
         public LinkLabel logLabel;
+        private CheckBox checkBox1;
     }
 }

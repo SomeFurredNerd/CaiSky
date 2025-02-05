@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Runtime.InteropServices;
 
 namespace CaiSky
 {
@@ -15,7 +17,8 @@ namespace CaiSky
     {
         string loginError, loginErrorPath;
         DateTime time;
-        
+        bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
         public int LoggedIn { get; set; }
         public Form2()
         {
@@ -32,10 +35,34 @@ namespace CaiSky
             if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 label7.Visible = true;
-
+                label4.Visible = false;
+                label8.Visible = false;
+                logLabel.Visible = false;
                 LoggedIn = 0;
-                File.WriteAllText("username.txt", textBox1.Text);
-                File.WriteAllText("password.txt", textBox2.Text);
+                var userBytes = UTF8Encoding.UTF8.GetBytes(textBox1.Text);
+                string userBase64 = Convert.ToBase64String(userBytes);
+                var passBytes = UTF8Encoding.UTF8.GetBytes(textBox2.Text);
+                string passBase64 = Convert.ToBase64String(passBytes);
+                
+                File.WriteAllText("username.txt", textBox1.Text); // always stored in a txt so that we can see who is logged in for the 'currently logged in as' message on Form1
+                
+                if (isWindows == false) // i don't know how to permanently store envs on linux, sorry :(
+                {
+                    File.WriteAllText("password.txt", textBox2.Text);
+                }
+                else if (checkBox1.Checked == true)
+                {
+                    Environment.SetEnvironmentVariable("csuser", userBase64, EnvironmentVariableTarget.Machine);
+                    Environment.SetEnvironmentVariable("cspass", passBase64, EnvironmentVariableTarget.Machine);
+                    Environment.SetEnvironmentVariable("csuser", userBase64, EnvironmentVariableTarget.Process);
+                    Environment.SetEnvironmentVariable("cspass", passBase64, EnvironmentVariableTarget.Process);
+
+                }
+                else
+                {
+                    Environment.SetEnvironmentVariable("csuser", userBase64, EnvironmentVariableTarget.Process);
+                    Environment.SetEnvironmentVariable("cspass", passBase64, EnvironmentVariableTarget.Process);
+                }
 
 
                 process2.StartInfo.RedirectStandardError = true;
@@ -114,7 +141,7 @@ namespace CaiSky
                 FileName = @$"{loginErrorPath}",
                 UseShellExecute = true
             };
-            Process.Start(loginErrorPath);
+            Process.Start(loginErrorLog);
 
         }
     }

@@ -32,8 +32,13 @@ namespace CaiSky
         {
             File.WriteAllText("username.txt", "null");
             File.WriteAllText("password.txt", "null");
+            Environment.SetEnvironmentVariable("csuser", "null", EnvironmentVariableTarget.Machine);
+            Environment.SetEnvironmentVariable("cspass", "null", EnvironmentVariableTarget.Machine);
+            Environment.SetEnvironmentVariable("csuser", "null", EnvironmentVariableTarget.Process);
+            Environment.SetEnvironmentVariable("cspass", "null", EnvironmentVariableTarget.Process);
             Application.Restart();
-            Environment.Exit(0);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

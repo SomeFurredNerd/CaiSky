@@ -99,7 +99,11 @@ namespace CaiSky
         private void button1_Click(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
-            f3.ShowDialog();
+            var resultf3 = f3.ShowDialog();
+            if (resultf3 == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
