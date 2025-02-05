@@ -5,9 +5,9 @@ A personal project I made to get accustomed to Visual Studio 2022 to get ready f
 
 This is a C# WinForms project that uses the Python Bluesky API to login and post. Originally it wasn't really meant to be a public project, but it kind of morphed into some version of a bluesky alternative to the delegate system on Twitter, but due to my inexperience I can't reaallyy make it as secure as I would like, which leads me to the disclaimer.
 
-# Disclaimer
+# Disclaimer for usage on Linux/Non-windows platforms
 
-This project stores the username and password in PLAINTEXT. This is NOT VERY SECURE, so please do not use this on any sort of shared machine, or anywhere where someone could access the directory CaiSky is saved to. I couldn't quite figure out a way to encrypt it in a way that it couldn't be easily reversed, if anyone has ideas or wants to contribute, that would be greatly appreciated :)
+Currently on non-windows systems, CaiSky stores the username and password in PLAIN TEXT. This is obviously not optimal, and I'm going to try and resolve this. This initially applied to Windows as well, but I've been able to since find a better way to store it on Windows. Unfortunately, I don't think that method works out of the box on Linux, and I don't have a way to test on Linux as of me writing this. I'm planning to set up a VM, just haven't gotten around to it yet.
 
 # Installation
 
