@@ -10,7 +10,7 @@ namespace CaiSky
         public Form1()
         {
             InitializeComponent();
-            
+
             // File.WriteAllText("currentworkingdirectory.txt", "a"); debug line to make sure i'm working in the right directory lol
             process2.Start();
             process2.WaitForExit();
@@ -51,7 +51,7 @@ namespace CaiSky
                 label5.Visible = true;
                 label6.Visible = false;
                 linkLabel1.Visible = false;
-
+                linkLabel2.Visible = false;
                 // ProcessStartInfo process1;
                 process1.StartInfo.UseShellExecute = false;
                 process1.StartInfo.RedirectStandardError = true;
@@ -75,10 +75,12 @@ namespace CaiSky
                     label5.Visible = false;
                     statusLabel.Visible = true;
                     statusLabel.Text = "Complete!";
+                    linkLabel2.Visible = true;
+
                 }
 
 
-                
+
 
 
             }
@@ -115,6 +117,22 @@ namespace CaiSky
                 UseShellExecute = true
             };
             Process.Start(processStartInfo);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel2.LinkVisited = true;
+            ProcessStartInfo processStartInfo = new ProcessStartInfo
+            {
+                FileName = $@"{File.ReadAllText("postlink.txt")}",
+                UseShellExecute = true
+            };
+            Process.Start(processStartInfo);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

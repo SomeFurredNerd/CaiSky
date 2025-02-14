@@ -48,6 +48,7 @@
             linkLabel1 = new LinkLabel();
             label7 = new Label();
             panel1 = new Panel();
+            linkLabel2 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -73,7 +74,6 @@
             label1.Size = new Size(783, 45);
             label1.TabIndex = 1;
             label1.Text = "Cairo's incredibly well made BlueSky posting interface";
-            //label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -94,7 +94,6 @@
             label2.Size = new Size(291, 32);
             label2.TabIndex = 3;
             label2.Text = "What do you want to say?";
-            //label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -178,7 +177,6 @@
             label4.Size = new Size(153, 15);
             label4.TabIndex = 9;
             label4.Text = "If you see this, no you don't";
-            //label4.Click += label4_Click;
             // 
             // pictureBox3
             // 
@@ -190,7 +188,6 @@
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
             pictureBox3.Visible = false;
-            //pictureBox3.Click += pictureBox3_Click;
             // 
             // imageList1
             // 
@@ -209,7 +206,6 @@
             statusLabel.Text = "Complete!";
             statusLabel.TextAlign = ContentAlignment.MiddleCenter;
             statusLabel.Visible = false;
-            //statusLabel.Click += label3_Click;
             // 
             // label5
             // 
@@ -220,7 +216,6 @@
             label5.TabIndex = 5;
             label5.Text = "Attempting to post...";
             label5.Visible = false;
-            //label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -263,11 +258,26 @@
             panel1.Size = new Size(99, 19);
             panel1.TabIndex = 14;
             // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.LinkArea = new LinkArea(6, 4);
+            linkLabel2.Location = new Point(328, 361);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(145, 21);
+            linkLabel2.TabIndex = 15;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Click here to see the post.";
+            linkLabel2.UseCompatibleTextRendering = true;
+            linkLabel2.Visible = false;
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
             Controls.Add(statusLabel);
             Controls.Add(label5);
@@ -316,5 +326,6 @@
         private Label label6;
         private Label label7;
         private Panel panel1;
+        private LinkLabel linkLabel2;
     }
 }

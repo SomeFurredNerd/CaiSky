@@ -13,14 +13,34 @@ else:
     password = open("password.txt", "r")
 
 
-# with open("debug.txt", "w") as file:
-#    file.write(f"{user64}, {pass64}, {username}, {password}") 
-
-
-
 client = Client()
 
 if osplatform == "nt":
     client.login(username, password)
 else: 
     client.login(f'{username.read()}', f'{password.read()}')
+
+data = client.get_author_feed(
+    actor=username,
+    filter='posts_and_author_threads',
+    limit=1,
+) 
+
+
+
+data = str(data)
+
+print(data)
+
+startpostindex = data.find("post/")
+endpostindex = data.find("'", startpostindex)
+
+post = data[startpostindex:endpostindex]
+posta,postb = post.split("/")
+
+#print(post)
+#print(posta)
+#print(postb)
+
+with open("postlink.txt", "w") as file:
+    file.write(f"https://bsky.app/profile/{username}/post/{postb}")
